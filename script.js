@@ -386,3 +386,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+const video = document.querySelector('.video-card video');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const playIcon = '<i class="fas fa-play"></i>';
+const pauseIcon = '<i class="fas fa-pause"></i>';
+
+playPauseBtn.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+    playPauseBtn.innerHTML = pauseIcon;
+  } else {
+    video.pause();
+    playPauseBtn.innerHTML = playIcon;
+  }
+});
