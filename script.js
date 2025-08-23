@@ -110,7 +110,7 @@ contactForm.addEventListener('submit', (e) => {
 
 Gostaria de solicitar um orçamento para adesivos decorativos.`;
     
-    const whatsappURL = `https://wa.me/5521985415602?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappURL = `https://wa.me/5521982296120?text=${encodeURIComponent(whatsappMessage)}`;
     
     // Open WhatsApp
     window.open(whatsappURL, '_blank');
