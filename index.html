@@ -113,112 +113,138 @@
     </section>
 
     <!-- Galeria Section -->
-    <section id="galeria" class="galeria">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nossos Trabalhos</h2>
-                <p>Confira alguns dos nossos projetos realizados</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" data-category="Banehiros">
-                    <div class="gallery-image">
-                        <img src="./img/exemplobanheiro01.jpg" alt="Adesivo decorativo de Porcelanato" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h4>Banheiro</h4>
-                            <p>Decoração com tema Porcelanato Banheiro</p>
-                            <button class="view-btn"
-                                onclick="openModal('./img/exemplobanheiro01.jpg', 'Banheiro', 'Adesivo decorativo de Porcelanato próprio para banheiros')">
-                                <i class="fas fa-eye"></i> Ver Detalhes
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="gallery-item" data-category="Salas">
-                    <div class="gallery-image">
-                        <img src="./img/exemploRipado01.jpg" alt="Parede ripada de madeira com espelhos decorativos" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h4>Painel Ripado em Madeira</h4>
-                            <p>Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.</p>
-                            <button class="view-btn"
-                                onclick="openModal('./img/exemploRipado01.jpg', 'Painel Ripado em Madeira', 'Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.')">
-                                <i class="fas fa-eye"></i> Ver Detalhes
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="gallery-item" data-category="Salas">
-                    <div class="gallery-image">
-                        <img src="./img/exemploImagem3d.jpg" alt="Parede decorada com mural de leões em 3D" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h4>Mural 3D de Leões</h4>
-                            <p>Parede imponente com leões em efeito realista, trazendo força e sofisticação ao ambiente.</p>
-                            <button class="view-btn"
-                                onclick="openModal('./img/exemploImagem3d.jpg', 'Mural 3D de Leões', 'Parede imponente com leões em efeito realista, trazendo força e sofisticação ao ambiente.')">
-                                <i class="fas fa-eye"></i> Ver Detalhes
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="gallery-item" data-category="Salas">
-                    <div class="gallery-image">
-                        <img src="./img/exemploFrases.jpg" alt="Parede decorada com frases motivacionais" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h4>Decoração Motivacional</h4>
-                            <p>Parede estilizada com frases inspiradoras em hand lettering e iluminação aconchegante.</p>
-                            <button class="view-btn"
-                                onclick="openModal('./img/exemploFrases.jpg', 'Decoração Motivacional', 'Parede estilizada com frases inspiradoras em hand lettering e iluminação aconchegante.')">
-                                <i class="fas fa-eye"></i> Ver Detalhes
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="gallery-item" data-category="Infantil">
-                    <div class="gallery-image">
-                        <img src="./img/ExemploInfantil.jpg" alt="Parede decorada com personagens infantis de super-heróis"
-                            loading="lazy">
-                        <div class="gallery-overlay">
-                            <h4>Painel Infantil Super-Heróis</h4>
-                            <p>Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das crianças.
-                            </p>
-                            <button class="view-btn"
-                                onclick="openModal('./img/ExemploInfantil.jpg', 'Painel Infantil Super-Heróis', 'Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das crianças.')">
-                                <i class="fas fa-eye"></i> Ver Detalhes
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="gallery-item" data-category="Salas">
-                    <div class="gallery-image">
-                        <img src="./img/ExemplosFlorais.jpg" alt="Parede com mural de pedras e folhagens verdes" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h4>Painel Floral</h4>
-                            <p>Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a natureza.</p>
-                            <button class="view-btn"
-                                onclick="openModal('./img/ExemplosFlorais.jpg', 'Painel Floral', 'Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a natureza.')">
-                                <i class="fas fa-eye"></i> Ver Detalhes
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<section id="galeria" class="galeria">
+    <div class="container">
+        <div class="section-header">
+            <h2>Nossos Trabalhos</h2>
+            <p>Confira alguns dos nossos projetos realizados</p>
+        </div>
 
-            
-            <!-- Gallery Filter -->
-            <div class="gallery-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="Banheiros">Banheiros</button>
-                <button class="filter-btn" data-filter="Salas">Salas</button>
-                <button class="filter-btn" data-filter="Cozinhas">Cozinhas</button>
-                <button class="filter-btn" data-filter="Porta/Mesa">Porta/Mesa</button>
-                <button class="filter-btn" data-filter="Quartos">Quartos</button>
-                <button class="filter-btn" data-filter="Infantil">Infantil</button>
+        <!-- OS BOTÕES PRECISAM FICAR ANTES DO GRID! -->
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-th"></i>
+                Todos
+            </button>
+            <button class="filter-btn" data-filter="Banheiros">
+                <i class="fas fa-bath"></i>
+                Banheiros
+            </button>
+            <button class="filter-btn" data-filter="Salas">
+                <i class="fas fa-couch"></i>
+                Salas
+            </button>
+            <button class="filter-btn" data-filter="Cozinhas">
+                <i class="fas fa-utensils"></i>
+                Cozinhas
+            </button>
+            <button class="filter-btn" data-filter="Porta/Mesa">
+                <i class="fas fa-door-open"></i>
+                Porta/Mesa
+            </button>
+            <button class="filter-btn" data-filter="Quartos">
+                <i class="fas fa-bed"></i>
+                Quartos
+            </button>
+            <button class="filter-btn" data-filter="Infantil">
+                <i class="fas fa-child"></i>
+                Infantil
+            </button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Exemplo com ANTES/DEPOIS - Corrija o data-category de "Banehiros" para "Banheiros" -->
+            <div class="gallery-item" data-category="Banheiros">
+                <div class="before-after-container" data-has-comparison="true">
+                    <img src="./img/exemplobanheiro01.jpg" alt="Banheiro - Antes" class="before-image">
+                    <img src="./img/exemplobanheiro01.jpg" alt="Banheiro - Depois" class="after-image">
+                    <div class="slider-control"></div>
+                    <div class="before-label">Antes</div>
+                    <div class="after-label">Depois</div>
+                </div>
+                <div class="gallery-overlay">
+                    <h4>Banheiro</h4>
+                    <p>Decoração com tema Porcelanato Banheiro</p>
+                    <button class="view-btn"
+                        onclick="openModal('./img/exemplobanheiro01.jpg', 'Banheiro', 'Adesivo decorativo de Porcelanato próprio para banheiros')">
+                        <i class="fas fa-eye"></i> Ver Detalhes
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Exemplo com uma imagem só -->
+            <div class="gallery-item" data-category="Salas">
+                <div class="gallery-image">
+                    <img src="./img/exemploRipado01.jpg" alt="Parede ripada de madeira com espelhos decorativos" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Painel Ripado em Madeira</h4>
+                        <p>Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.</p>
+                        <button class="view-btn"
+                            onclick="openModal('./img/exemploRipado01.jpg', 'Painel Ripado em Madeira', 'Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="gallery-item" data-category="Salas">
+                <div class="gallery-image">
+                    <img src="./img/exemploImagem3d.jpg" alt="Parede decorada com mural de leões em 3D" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Mural 3D de Leões</h4>
+                        <p>Parede imponente com leões em efeito realista, trazendo força e sofisticação ao ambiente.</p>
+                        <button class="view-btn"
+                            onclick="openModal('./img/exemploImagem3d.jpg', 'Mural 3D de Leões', 'Parede imponente com leões em efeito realista, trazendo força e sofisticação ao ambiente.')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="gallery-item" data-category="Salas">
+                <div class="gallery-image">
+                    <img src="./img/exemploFrases.jpg" alt="Parede decorada com frases motivacionais" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Decoração Motivacional</h4>
+                        <p>Parede estilizada com frases inspiradoras em hand lettering e iluminação aconchegante.</p>
+                        <button class="view-btn"
+                            onclick="openModal('./img/exemploFrases.jpg', 'Decoração Motivacional', 'Parede estilizada com frases inspiradoras em hand lettering e iluminação aconchegante.')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="gallery-item" data-category="Infantil">
+                <div class="gallery-image">
+                    <img src="./img/ExemploInfantil.jpg" alt="Parede decorada com personagens infantis de super-heróis" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Painel Infantil Super-Heróis</h4>
+                        <p>Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das crianças.</p>
+                        <button class="view-btn"
+                            onclick="openModal('./img/ExemploInfantil.jpg', 'Painel Infantil Super-Heróis', 'Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das crianças.')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="gallery-item" data-category="Salas">
+                <div class="gallery-image">
+                    <img src="./img/ExemplosFlorais.jpg" alt="Parede com mural de pedras e folhagens verdes" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Painel Floral</h4>
+                        <p>Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a natureza.</p>
+                        <button class="view-btn"
+                            onclick="openModal('./img/ExemplosFlorais.jpg', 'Painel Floral', 'Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a natureza.')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Modal -->
     <div id="imageModal" class="modal">

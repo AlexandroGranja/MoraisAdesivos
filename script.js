@@ -329,3 +329,60 @@ const debouncedScrollHandler = debounce(() => {
 
 window.addEventListener('scroll', debouncedScrollHandler);
 
+// Funcionalidade antes/depois
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.before-after-container[data-has-comparison="true"]').forEach(container => {
+        const slider = container.querySelector('.slider-control');
+        const afterImage = container.querySelector('.after-image');
+        let isDown = false;
+
+        if (!slider || !afterImage) return; // Verifica se os elementos existem
+
+        // Mouse events
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            e.preventDefault();
+            container.style.cursor = 'col-resize';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            updateSlider(container, e.clientX);
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDown = false;
+            container.style.cursor = 'col-resize';
+        });
+
+        // Touch events para mobile
+        slider.addEventListener('touchstart', (e) => {
+            isDown = true;
+            e.preventDefault();
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const touch = e.touches[0];
+            updateSlider(container, touch.clientX);
+        });
+
+        document.addEventListener('touchend', () => {
+            isDown = false;
+        });
+
+        function updateSlider(container, clientX) {
+            const rect = container.getBoundingClientRect();
+            const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+            const percentage = (x / rect.width) * 100;
+
+            // Limita entre 10% e 90%
+            const limitedPercentage = Math.max(10, Math.min(90, percentage));
+
+            slider.style.left = limitedPercentage + '%';
+            afterImage.style.clipPath = `inset(0 ${100 - limitedPercentage}% 0 0)`;
+        }
+    });
+});
