@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moraes Adesivos | Especialistas em Adesivos Decorativos no Rio de Janeiro</title>
-    <meta name="description" content="Moraes Adesivos - Especialistas em papel de parede adesivo e adesivos decorativos para casa e empresa. Atendemos todo o Rio de Janeiro desde 2021.">
+    <meta name="description"
+        content="Moraes Adesivos - Especialistas em papel de parede adesivo e adesivos decorativos para casa e empresa. Atendemos todo o Rio de Janeiro desde 2021.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -37,8 +41,10 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Transforme Seus Ambientes com <span class="highlight">Adesivos Decorativos</span></h1>
-                <p class="hero-description">Especialistas em papel de parede adesivo e decoração para casa e empresa. Atendemos todo o Rio de Janeiro com qualidade e criatividade desde 2021.</p>
+                <h1 class="hero-title">Transforme Seus Ambientes com <span class="highlight">Adesivos Decorativos</span>
+                </h1>
+                <p class="hero-description">Especialistas em papel de parede adesivo e decoração para casa e empresa.
+                    Atendemos todo o Rio de Janeiro com qualidade e criatividade desde 2021.</p>
                 <div class="hero-buttons">
                     <a href="#contato" class="btn btn-primary">
                         <i class="fab fa-whatsapp"></i> Solicitar Orçamento
@@ -80,11 +86,14 @@
             <div class="sobre-content">
                 <div class="sobre-text">
                     <h3>Nossa História</h3>
-                    <p>Desde 2021, a Moraes Adesivos tem se dedicado a transformar ambientes residenciais e comerciais em todo o Rio de Janeiro. Especializados em papel de parede adesivo e adesivos decorativos, oferecemos soluções criativas e de alta qualidade para renovar seus espaços.</p>
-                    
+                    <p>Desde 2021, a Moraes Adesivos tem se dedicado a transformar ambientes residenciais e comerciais
+                        em todo o Rio de Janeiro. Especializados em papel de parede adesivo e adesivos decorativos,
+                        oferecemos soluções criativas e de alta qualidade para renovar seus espaços.</p>
+
                     <h3>Nossa Missão</h3>
-                    <p>Proporcionar transformações incríveis em ambientes através de adesivos decorativos de alta qualidade, combinando criatividade, técnica e atendimento personalizado para cada cliente.</p>
-                    
+                    <p>Proporcionar transformações incríveis em ambientes através de adesivos decorativos de alta
+                        qualidade, combinando criatividade, técnica e atendimento personalizado para cada cliente.</p>
+
                     <div class="features">
                         <div class="feature">
                             <i class="fas fa-medal"></i>
@@ -113,83 +122,90 @@
     </section>
 
     <!-- Galeria Section -->
-<section id="galeria" class="galeria">
-    <div class="container">
-        <div class="section-header">
-            <h2>Nossos Trabalhos</h2>
-            <p>Confira alguns dos nossos projetos realizados</p>
-        </div>
-
-        <!-- OS BOTÕES PRECISAM FICAR ANTES DO GRID! -->
-        <div class="gallery-filter">
-            <button class="filter-btn active" data-filter="all">
-                <i class="fas fa-th"></i>
-                Todos
-            </button>
-            <button class="filter-btn" data-filter="Banheiros">
-                <i class="fas fa-bath"></i>
-                Banheiros
-            </button>
-            <button class="filter-btn" data-filter="Salas">
-                <i class="fas fa-couch"></i>
-                Salas
-            </button>
-            <button class="filter-btn" data-filter="Cozinhas">
-                <i class="fas fa-utensils"></i>
-                Cozinhas
-            </button>
-            <button class="filter-btn" data-filter="Porta/Mesa">
-                <i class="fas fa-door-open"></i>
-                Porta/Mesa
-            </button>
-            <button class="filter-btn" data-filter="Quartos">
-                <i class="fas fa-bed"></i>
-                Quartos
-            </button>
-            <button class="filter-btn" data-filter="Infantil">
-                <i class="fas fa-child"></i>
-                Infantil
-            </button>
-        </div>
-
-        <div class="gallery-grid">
-            <!-- Exemplo com ANTES/DEPOIS - Corrija o data-category de "Banehiros" para "Banheiros" -->
-            <div class="gallery-item" data-category="Banheiros">
-                <div class="before-after-container" data-has-comparison="true">
-                    <img src="./img/exemplobanheiro01.jpg" alt="Banheiro - Antes" class="before-image">
-                    <img src="./img/exemplobanheiro01.jpg" alt="Banheiro - Depois" class="after-image">
-                    <div class="slider-control"></div>
-                    <div class="before-label">Antes</div>
-                    <div class="after-label">Depois</div>
-                </div>
-                <div class="gallery-overlay">
-                    <h4>Banheiro</h4>
-                    <p>Decoração com tema Porcelanato Banheiro</p>
-                    <button class="view-btn"
-                        onclick="openModal('./img/exemplobanheiro01.jpg', 'Banheiro', 'Adesivo decorativo de Porcelanato próprio para banheiros')">
-                        <i class="fas fa-eye"></i> Ver Detalhes
-                    </button>
-                </div>
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Trabalhos</h2>
+                <p>Confira alguns dos nossos projetos realizados</p>
             </div>
-        
-            <!-- Exemplo com uma imagem só -->
-            <div class="gallery-item" data-category="Salas">
-                <div class="gallery-image">
-                    <img src="./img/exemploRipado01.jpg" alt="Parede ripada de madeira com espelhos decorativos" loading="lazy">
+
+            <!-- OS BOTÕES PRECISAM FICAR ANTES DO GRID! -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    Todos
+                </button>
+                <button class="filter-btn" data-filter="Banheiros">
+                    <i class="fas fa-bath"></i>
+                    Banheiros
+                </button>
+                <button class="filter-btn" data-filter="Salas">
+                    <i class="fas fa-couch"></i>
+                    Salas
+                </button>
+                <button class="filter-btn" data-filter="Cozinhas">
+                    <i class="fas fa-utensils"></i>
+                    Cozinhas
+                </button>
+                <button class="filter-btn" data-filter="Porta/Mesa">
+                    <i class="fas fa-door-open"></i>
+                    Porta/Mesa
+                </button>
+                <button class="filter-btn" data-filter="Quartos">
+                    <i class="fas fa-bed"></i>
+                    Quartos
+                </button>
+                <button class="filter-btn" data-filter="Infantil">
+                    <i class="fas fa-child"></i>
+                    Infantil
+                </button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="Banheiros">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/exemplobanheiro01.jpg" alt="Banheiro - Antes" class="before-image">
+                        <img src="./img/exemplobanheiroantes.jpg" alt="Banheiro - Depois" class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Banheiro</h4>
+                        <p>Decoração com tema Porcelanato Banheiro</p>
+                        <button class="view-btn"
+                            onclick="openModal('./img/exemplobanheiro01.jpg', 'Banheiro', 'Adesivo decorativo de Porcelanato próprio para banheiros')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="Salas">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/exemploRipado01.jpg" alt="Parede ripada - Antes" class="before-image">
+                        <img src="./img/exemploRipado02.jpg" alt="Parede ripada - Depois" class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
                     <div class="gallery-overlay">
                         <h4>Painel Ripado em Madeira</h4>
-                        <p>Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.</p>
+                        <p>Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.
+                        </p>
                         <button class="view-btn"
                             onclick="openModal('./img/exemploRipado01.jpg', 'Painel Ripado em Madeira', 'Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
                 </div>
-            </div>
-        
-            <div class="gallery-item" data-category="Salas">
-                <div class="gallery-image">
-                    <img src="./img/exemploImagem3d.jpg" alt="Parede decorada com mural de leões em 3D" loading="lazy">
+
+                <div class="gallery-item" data-category="Salas">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/exemploImagem3d.jpg" alt="Mural Leões - Antes" class="before-image">
+                        <img src="./img/exemploImagem3dDepois.jpg" alt="Mural Leões - Depois" class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
                     <div class="gallery-overlay">
                         <h4>Mural 3D de Leões</h4>
                         <p>Parede imponente com leões em efeito realista, trazendo força e sofisticação ao ambiente.</p>
@@ -199,11 +215,15 @@
                         </button>
                     </div>
                 </div>
-            </div>
-        
-            <div class="gallery-item" data-category="Salas">
-                <div class="gallery-image">
-                    <img src="./img/exemploFrases.jpg" alt="Parede decorada com frases motivacionais" loading="lazy">
+
+                <div class="gallery-item" data-category="Salas">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/exemploFrases.jpg" alt="Frases - Antes" class="before-image">
+                        <img src="./img/exemploFrasesDepois.jpg" alt="Frases - Depois" class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
                     <div class="gallery-overlay">
                         <h4>Decoração Motivacional</h4>
                         <p>Parede estilizada com frases inspiradoras em hand lettering e iluminação aconchegante.</p>
@@ -213,38 +233,45 @@
                         </button>
                     </div>
                 </div>
-            </div>
-        
-            <div class="gallery-item" data-category="Infantil">
-                <div class="gallery-image">
-                    <img src="./img/ExemploInfantil.jpg" alt="Parede decorada com personagens infantis de super-heróis" loading="lazy">
+
+                <div class="gallery-item" data-category="Infantil">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/ExemploInfantil.jpg" alt="Painel Infantil - Antes" class="before-image">
+                        <img src="./img/ExemploInfantilDepois.jpg" alt="Painel Infantil - Depois" class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
                     <div class="gallery-overlay">
                         <h4>Painel Infantil Super-Heróis</h4>
-                        <p>Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das crianças.</p>
+                        <p>Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das
+                            crianças.</p>
                         <button class="view-btn"
                             onclick="openModal('./img/ExemploInfantil.jpg', 'Painel Infantil Super-Heróis', 'Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das crianças.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
                 </div>
-            </div>
-        
-            <div class="gallery-item" data-category="Salas">
-                <div class="gallery-image">
-                    <img src="./img/ExemplosFlorais.jpg" alt="Parede com mural de pedras e folhagens verdes" loading="lazy">
+
+                <div class="gallery-item" data-category="Salas">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/ExemplosFlorais.jpg" alt="Floral - Antes" class="before-image">
+                        <img src="./img/ExemplosFloraisDepois.jpg" alt="Floral - Depois" class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
                     <div class="gallery-overlay">
                         <h4>Painel Floral</h4>
-                        <p>Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a natureza.</p>
+                        <p>Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a
+                            natureza.</p>
                         <button class="view-btn"
                             onclick="openModal('./img/ExemplosFlorais.jpg', 'Painel Floral', 'Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a natureza.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Modal -->
     <div id="imageModal" class="modal">
@@ -280,7 +307,7 @@
                         <li>Áreas externas</li>
                     </ul>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-building"></i>
@@ -294,7 +321,7 @@
                         <li>Espaços de coworking</li>
                     </ul>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-couch"></i>
@@ -308,7 +335,7 @@
                         <li>Mesas e bancadas</li>
                     </ul>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-palette"></i>
@@ -342,12 +369,13 @@
                         <div class="contact-details">
                             <h4>WhatsApp</h4>
                             <p>(21) 98229-6120</p>
-                            <a href="https://wa.me/5521982296120?text=Olá! Gostaria de solicitar um orçamento para adesivos decorativos." class="btn btn-whatsapp">
+                            <a href="https://wa.me/5521982296120?text=Olá! Gostaria de solicitar um orçamento para adesivos decorativos."
+                                class="btn btn-whatsapp">
                                 <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fab fa-instagram"></i>
@@ -355,12 +383,13 @@
                         <div class="contact-details">
                             <h4>Instagram</h4>
                             <p>@moraesadesivos</p>
-                            <a href="https://www.instagram.com/moraesadesivos/" target="_blank" class="btn btn-instagram">
+                            <a href="https://www.instagram.com/moraesadesivos/" target="_blank"
+                                class="btn btn-instagram">
                                 <i class="fab fa-instagram"></i> Seguir no Instagram
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -372,7 +401,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <h3>Solicite seu Orçamento</h3>
                     <form id="contactForm">
@@ -392,7 +421,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Descreva seu projeto..." rows="4"></textarea>
+                            <textarea id="message" name="message" placeholder="Descreva seu projeto..."
+                                rows="4"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">
                             <i class="fab fa-whatsapp"></i> Enviar via WhatsApp
@@ -409,7 +439,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><i class="fas fa-palette"></i> Moraes Adesivos</h3>
-                    <p>Transformando ambientes com criatividade e qualidade desde 2021. Especialistas em adesivos decorativos no Rio de Janeiro.</p>
+                    <p>Transformando ambientes com criatividade e qualidade desde 2021. Especialistas em adesivos
+                        decorativos no Rio de Janeiro.</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/moraesadesivos/" target="_blank">
                             <i class="fab fa-instagram"></i>
@@ -419,7 +450,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Serviços</h4>
                     <ul>
@@ -429,7 +460,7 @@
                         <li><a href="#servicos">Adesivos Personalizados</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Contato</h4>
                     <ul>
@@ -439,7 +470,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 Moraes Adesivos. Todos os direitos reservados.</p>
                 <p>Desenvolvido por Alexandro Granja</p>
@@ -448,11 +479,12 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5521982296120?text=Olá! Gostaria de solicitar um orçamento para adesivos decorativos." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5521982296120?text=Olá! Gostaria de solicitar um orçamento para adesivos decorativos."
+        class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
