@@ -112,18 +112,19 @@
                         </div>
                     </div>
                 </div>
-                        <div class="sobre-image">
-                            <div class="video-card">
-                                <video src="./img/videoDesmostracao.mp4" autoplay muted loop playsinline poster="./img/logo01.jpg">
-                                    Seu navegador não suporta o elemento de vídeo.
-                                </video>
-                                <div class="video-overlay">
-                                    <button class="play-pause-btn" id="playPauseBtn">
-                                        <i class="fas fa-pause"></i>
-                                    </button>
-                                </div>
-                            </div>
+                <div class="sobre-image">
+                    <div class="video-card">
+                        <video src="./img/videoDesmostracao.mp4" autoplay muted loop playsinline
+                            poster="./img/logo01.jpg">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        <div class="video-overlay">
+                            <button class="play-pause-btn" id="playPauseBtn">
+                                <i class="fas fa-pause"></i>
+                            </button>
                         </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -186,7 +187,7 @@
                     </div>
                 </div>
 
-                 <div class="gallery-item" data-category="Salas">
+                <div class="gallery-item" data-category="Salas">
                     <div class="before-after-container" data-has-comparison="true">
                         <img src="./img/exemploRipado01.jpg" alt="Parede ripada - Antes" class="before-image">
                         <img src="./img/exemploRipadoAntes.jpg" alt="Parede ripada - Depois" class="after-image">
@@ -200,6 +201,48 @@
                         </p>
                         <button class="view-btn"
                             onclick="openModal('./img/exemploRipado01.jpg', 'Painel Ripado em Madeira', 'Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="Porta/Mesa">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/ExemploGuardaRoupas01Antes.jpeg" alt="Armário com acabamento de madeira - Antes"
+                            class="before-image">
+                        <img src="./img/ExemploGuardaRoupas01Depois.jpeg" alt="Armário com acabamento branco - Depois"
+                            class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Transformação de Armário</h4>
+                        <p>Armário de madeira transformado com acabamento branco, modernizando o quarto e criando um
+                            ambiente mais claro.
+                        </p>
+                        <button class="view-btn"
+                            onclick="openModal('Image 2', 'Transformação de Armário', 'Armário de madeira transformado com acabamento branco, modernizando o quarto e criando um ambiente mais claro.')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="Cozinha">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/ExemploFogãoAntesfrente.jpg" alt="Fogão - Antes" class="before-image">
+                        <img src="./img/ExemploFogãoDepoisfrente.jpg" alt="Fogão - Depois" class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Restauração de Fogão</h4>
+                        <p>Fogão restaurado com um novo acabamento na chapa, deixando-o com a aparência de um
+                            eletrodoméstico novo.
+                        </p>
+                        <button class="view-btn"
+                            onclick="openModal('./img/ExemploFogãoDepoisfrente.jpg', 'Restauração de Fogão', 'Fogão restaurado com um novo acabamento na chapa, deixando-o com a aparência de um eletrodoméstico novo.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -347,23 +390,23 @@
                     </div>
                 </div>
 
-            <div class="gallery-item" data-category="Quartos">
-                <div class="before-after-container" data-has-comparison="true">
-                    <img src="./img/exemplosQuatos05.jpg" alt="Quarto - Antes" class="before-image">
-                    <img src="./img/exemplosQuatos05antes.jpg" alt="Quarto - Depois" class="after-image">
-                    <div class="slider-control"></div>
-                    <div class="before-label">Antes</div>
-                    <div class="after-label">Depois</div>
+                <div class="gallery-item" data-category="Quartos">
+                    <div class="before-after-container" data-has-comparison="true">
+                        <img src="./img/exemplosQuatos05.jpg" alt="Quarto - Antes" class="before-image">
+                        <img src="./img/exemplosQuatos05antes.jpg" alt="Quarto - Depois" class="after-image">
+                        <div class="slider-control"></div>
+                        <div class="before-label">Antes</div>
+                        <div class="after-label">Depois</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Quarto</h4>
+                        <p>Decoração de parede com tema mármore rosa e bege no quarto</p>
+                        <button class="view-btn"
+                            onclick="openModal('./img/exemplosQuatos05.jpg', 'Quarto - Depois', 'Quarto com aplicação de adesivo decorativo de mármore rosa na parede.')">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                    </div>
                 </div>
-                <div class="gallery-overlay">
-                    <h4>Quarto</h4>
-                    <p>Decoração de parede com tema mármore rosa e bege no quarto</p>
-                    <button class="view-btn"
-                        onclick="openModal('./img/exemplosQuatos05.jpg', 'Quarto - Depois', 'Quarto com aplicação de adesivo decorativo de mármore rosa na parede.')">
-                        <i class="fas fa-eye"></i> Ver Detalhes
-                    </button>
-                </div>
-            </div>
 
                 <div class="gallery-item" data-category="Quartos">
                     <div class="before-after-container" data-has-comparison="true">
@@ -419,7 +462,7 @@
                     </div>
                 </div>
 
-                 <div class="gallery-item" data-category="Salas">
+                <div class="gallery-item" data-category="Salas">
                     <div class="before-after-container" data-has-comparison="true">
                         <img src="./img/exemplosSalas07Antes.jpg" alt="Entrada - Antes" class="before-image">
                         <img src="./img/exemplosSalas07.jpg" alt="Entrada - Depois" class="after-image">
@@ -427,7 +470,7 @@
                         <div class="before-label">Antes</div>
                         <div class="after-label">Depois</div>
                     </div>
-                    <div class="gallery-overlay"> 
+                    <div class="gallery-overlay">
                         <h4>Entrada</h4>
                         <p>Decoração com tema de frases motivacionais </p>
                         <button class="view-btn"
@@ -436,7 +479,7 @@
                         </button>
                     </div>
                 </div>
-    
+
                 <div class="gallery-item" data-category="Infantil">
                     <div class="before-after-container" data-has-comparison="true">
                         <img src="./img/ExemploInfantil.jpg" alt="Painel Infantil - Antes" class="before-image">
@@ -484,7 +527,8 @@
                     </div>
                     <div class="gallery-overlay">
                         <h4>Painel Ripado, com Revistimento</h4>
-                        <p>Ambiente elegante com parede ripada em madeira e um Revestimento Melhorando Visual da Sala.</p>
+                        <p>Ambiente elegante com parede ripada em madeira e um Revestimento Melhorando Visual da Sala.
+                        </p>
                         <button class="view-btn"
                             onclick="openModal('./img/exemploSala04depois.jpg', 'Painel Ripado, com Revistimento', 'Ambiente elegante com parede ripada em madeira e um Revestimento Melhorando Visual da Sala.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
