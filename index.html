@@ -19,7 +19,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <h2><i class="fas fa-palette"></i> Moraes Adesivos</h2>
+                    <h2><i class="fas fa-palette" aria-hidden="true"></i> Moraes Adesivos</h2>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Início</a></li>
@@ -28,11 +28,11 @@
                     <li><a href="#servicos" class="nav-link">Serviços</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -115,12 +115,12 @@
                 <div class="sobre-image">
                     <div class="video-card">
                         <video src="./img/videoDesmostracao.mp4" autoplay muted loop playsinline
-                            poster="./img/logo01.jpg">
+                            poster="./img/logo01.jpg" aria-label="Vídeo demonstrativo dos serviços de adesivos decorativos">
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                         <div class="video-overlay">
-                            <button class="play-pause-btn" id="playPauseBtn">
-                                <i class="fas fa-pause"></i>
+                            <button class="play-pause-btn" id="playPauseBtn" aria-label="Pausar ou reproduzir vídeo">
+                                <i class="fas fa-pause" aria-hidden="true"></i>
                             </button>
                         </div>
                     </div>
@@ -137,37 +137,37 @@
                 <p>Confira alguns dos nossos projetos realizados</p>
             </div>
 
-            <div class="gallery-filter">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th"></i>
+            <div class="gallery-filter" role="tablist" aria-label="Filtros da galeria">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="gallery-grid">
+                    <i class="fas fa-th" aria-hidden="true"></i>
                     Todos
                 </button>
-                <button class="filter-btn" data-filter="Banheiros">
-                    <i class="fas fa-bath"></i>
+                <button class="filter-btn" data-filter="Banheiros" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-bath" aria-hidden="true"></i>
                     Banheiros
                 </button>
-                <button class="filter-btn" data-filter="Salas">
-                    <i class="fas fa-couch"></i>
+                <button class="filter-btn" data-filter="Salas" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-couch" aria-hidden="true"></i>
                     Salas
                 </button>
-                <button class="filter-btn" data-filter="Cozinhas">
-                    <i class="fas fa-utensils"></i>
+                <button class="filter-btn" data-filter="Cozinhas" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
                     Cozinhas
                 </button>
-                <button class="filter-btn" data-filter="Porta/Mesa">
-                    <i class="fas fa-door-open"></i>
+                <button class="filter-btn" data-filter="Porta/Mesa" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-door-open" aria-hidden="true"></i>
                     Porta/Mesa
                 </button>
-                <button class="filter-btn" data-filter="Quartos">
-                    <i class="fas fa-bed"></i>
+                <button class="filter-btn" data-filter="Quartos" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-bed" aria-hidden="true"></i>
                     Quartos
                 </button>
-                <button class="filter-btn" data-filter="Infantil">
-                    <i class="fas fa-child"></i>
+                <button class="filter-btn" data-filter="Infantil" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-child" aria-hidden="true"></i>
                     Infantil
                 </button>
             </div>
-            <div class="gallery-grid">
+            <div class="gallery-grid" id="gallery-grid" role="tabpanel">
 
                 <div class="gallery-item" data-category="Porta/Mesa">
                     <div class="before-after-container" data-has-comparison="true">
@@ -181,7 +181,7 @@
                         <h4>Porta com Painel Ripado</h4>
                         <p>Adesivo com efeito de madeira ripada.</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosQuartos02.jpg', 'Porta com Painel Ripado', 'Aplicação de adesivo vinílico amadeirado com efeito de painel ripado em porta de correr, trazendo sofisticação e um visual moderno ao ambiente.')">
+                            onclick="openModal('./img/exemplosQuartos02.jpg', 'Porta com Painel Ripado', 'Aplicação de adesivo vinílico amadeirado com efeito de painel ripado em porta de correr estilo barn door. O acabamento em madeira escura com ripas verticais cria um visual sofisticado e moderno. A porta deslizante com trilho prateado e alça vertical adiciona elegância ao ambiente, proporcionando privacidade sem perder o charme contemporâneo.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -200,7 +200,7 @@
                         <p>Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.
                         </p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemploRipado01.jpg', 'Painel Ripado em Madeira', 'Ambiente elegante com parede ripada em madeira e espelhos decorativos que ampliam o espaço.')">
+                            onclick="openModal('./img/exemploRipado01.jpg', 'Painel Ripado em Madeira', 'Ambiente elegante com parede completa revestida em painel ripado de madeira clara, criando uma textura sofisticada e acolhedora. A decoração é complementada por espelhos decorativos redondos de tamanhos diferentes estrategicamente posicionados, que não apenas ampliam visualmente o espaço, mas também refletem a luz natural, iluminando o corredor de entrada com estilo contemporâneo.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -222,7 +222,7 @@
                             ambiente mais claro.
                         </p>
                         <button class="view-btn"
-                            onclick="openModal('./img/ExemploGuardaRoupas01Depois.jpeg', 'Transformação de Armário', 'Armário de madeira transformado com acabamento branco, modernizando o quarto e criando um ambiente mais claro.')">
+                            onclick="openModal('./img/ExemploGuardaRoupas01Depois.jpeg', 'Transformação de Armário', 'Transformação completa de guarda-roupas de madeira escura para um acabamento branco moderno e minimalista. A nova cor clareia o ambiente do quarto, criando sensação de amplitude e organização. O acabamento liso e uniforme em branco proporciona um visual clean, perfeito para quartos contemporâneos que buscam luminosidade e sofisticação.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -240,7 +240,7 @@
                         <h4>Banheiro</h4>
                         <p>Decoração com tema Porcelanato Banheiro</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplobanheiro01.jpg', 'Banheiro', 'Adesivo decorativo de Porcelanato próprio para banheiros')">
+                            onclick="openModal('./img/exemplobanheiro01.jpg', 'Banheiro com Revestimento Porcelanato', 'Banheiro modernizado com adesivo decorativo que imita porcelanato, material ideal para áreas úmidas. O acabamento cerâmico visual proporciona resistência à umidade e fácil limpeza, mantendo o ambiente sempre higiênico. O design clean e minimalista cria um espaço sofisticado e funcional, combinando beleza estética com praticidade no dia a dia.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -258,7 +258,7 @@
                         <h4>Sala de Estar</h4>
                         <p>Decoração com tema de papel de parede de folhas tropicais</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosSalas06.jpg', 'Sala de Estar', 'Decoração com papel de parede de folhas tropicais')">
+                            onclick="openModal('./img/exemplosSalas06.jpg', 'Sala de Estar com Folhas Tropicais', 'Sala de estar transformada com papel de parede de folhas tropicais em tons verdes vibrantes. O padrão botânico traz vida e frescor ao ambiente, criando uma atmosfera natural e acolhedora. As folhas grandes e detalhadas adicionam profundidade visual, perfeitas para quem busca conectar o interior com a natureza, trazendo um toque exótico e moderno ao espaço.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -275,7 +275,7 @@
                         <h4>Cozinha</h4>
                         <p>Decoração com tema de azulejo marmorizado e cantinho de café</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosalas07Antes.jpg', 'Cozinha', 'Decoração com azulejo marmorizado e cantinho de café')">
+                            onclick="openModal('./img/exemplosalas07Antes.jpg', 'Cozinha com Azulejo Marmorizado', 'Cozinha elegante decorada com azulejo marmorizado que imita mármore real com veios naturais em tons neutros. O acabamento sofisticado transforma o espaço, criando um cantinho de café acolhedor e funcional. O design clean e atemporal combina perfeitamente com diferentes estilos de decoração, elevando o ambiente para um novo patamar de sofisticação e modernidade.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -293,7 +293,7 @@
                         <h4>Banheiro</h4>
                         <p>Decoração com tema de azulejo marmorizado</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemploBanheiro03.jpg', 'Banheiro', 'Decoração com tema de azulejo marmorizado')">
+                            onclick="openModal('./img/exemploBanheiro03.jpg', 'Banheiro com Azulejo Marmorizado', 'Banheiro luxuoso revestido com adesivo decorativo que imita azulejo marmorizado em tons cinza e branco. As veias naturais do mármore criam um padrão único e sofisticado, transformando o ambiente em um espaço spa-like. O acabamento resistente à umidade mantém a beleza e facilita a limpeza, combinando elegância com funcionalidade prática.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -310,7 +310,7 @@
                         <h4>Banheiro</h4>
                         <p>Decoração com tema de azulejo marmorizado</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemploBanheiro04.jpg', 'Banheiro', 'Decoração com tema de azulejo marmorizado')">
+                            onclick="openModal('./img/exemploBanheiro04.jpg', 'Banheiro Premium com Mármore', 'Banheiro de alto padrão decorado com adesivo de azulejo marmorizado que recria a elegância do mármore natural. O padrão sofisticado com veios delicados em tons neutros cria um ambiente spa-like e relaxante. O acabamento premium resiste à umidade e é fácil de manter, proporcionando um espaço que combina luxo, beleza e praticidade.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -328,7 +328,7 @@
                         <h4>Quarto Infantil</h4>
                         <p>Decoração de parede com adesivo temático Stitch e Angel</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosQuatos06.jpg', 'Quarto - Depois', 'Quarto com aplicação de adesivo decorativo infantil com os personagens Stitch e Angel em um fundo cósmico rosa e azul.')">
+                            onclick="openModal('./img/exemplosQuatos06.jpg', 'Quarto Infantil Stitch e Angel', 'Quarto infantil mágico decorado com adesivo dos personagens Stitch e Angel da Disney em um cenário cósmico deslumbrante. O fundo apresenta um universo espacial em tons de rosa e azul, com estrelas e nebulosas, criando um ambiente onírico que estimula a imaginação das crianças. Os personagens adoráveis adicionam personalidade e encanto ao espaço, tornando-o único e especial.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -346,7 +346,7 @@
                         <h4>Quarto</h4>
                         <p>Decoração de parede com tema de mármore e bege no quarto</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosQuatos03.jpg', 'Quarto - Depois', 'Quarto com aplicação de adesivo decorativo de mármore na parede.')">
+                            onclick="openModal('./img/exemplosQuatos03.jpg', 'Quarto com Parede em Mármore', 'Quarto sofisticado com parede de cabeceira revestida em adesivo decorativo que imita mármore natural em tons bege e creme. As veias sutis do mármore criam profundidade e elegância, transformando o ambiente em um espaço refinado e atemporal. O acabamento neutro permite combinar com diversos estilos de decoração, desde o minimalista até o mais clássico.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -364,7 +364,7 @@
                         <h4>Quarto</h4>
                         <p>Decoração de parede com tema mármore no quarto</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosQuartos01.jpg', 'Quarto - Depois', 'Quarto com aplicação de adesivo decorativo branco com veios dourados imitando mármore na parede.')">
+                            onclick="openModal('./img/exemplosQuartos01.jpg', 'Quarto com Mármore Dourado', 'Quarto luxuoso decorado com adesivo de mármore branco com veios dourados exclusivos. O padrão sofisticado combina a pureza do branco com o luxo do dourado, criando um ambiente regal e refinado. O acabamento premium imita perfeitamente o mármore natural, adicionando valor e elegância ao espaço, perfeito para quartos que buscam sofisticação e glamour.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -382,7 +382,7 @@
                         <h4>Quarto</h4>
                         <p>Decoração de parede com tema mármore rosa e bege no quarto</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosQuatos05.jpg', 'Quarto - Depois', 'Quarto com aplicação de adesivo decorativo de mármore rosa na parede.')">
+                            onclick="openModal('./img/exemplosQuatos05.jpg', 'Quarto com Mármore Rosa', 'Quarto delicado e romântico decorado com adesivo de mármore rosa com veios sutis em tons bege. O padrão suave e feminino cria uma atmosfera acolhedora e elegante, perfeito para quartos que buscam um toque de sofisticação com delicadeza. As nuances rosadas combinam harmoniosamente com decorações em tons neutros e pastéis, criando um ambiente sereno e refinado.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -400,7 +400,7 @@
                         <h4>Quarto</h4>
                         <p>Decoração de parede com tema bambu no quarto</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosQuatos04.jpg', 'Quarto - Depois', 'Quarto com aplicação de adesivo decorativo de bambu na parede.')">
+                            onclick="openModal('./img/exemplosQuatos04.jpg', 'Quarto com Parede de Bambu', 'Quarto zen e natural decorado com adesivo de bambu que recria a textura autêntica da madeira. O padrão vertical das ripas de bambu cria ritmo visual e profundidade, trazendo elementos naturais para o ambiente. O acabamento em tons claros proporciona um espaço tranquilo e acolhedor, perfeito para quem busca conexão com a natureza e um ambiente relaxante inspirado no estilo asiático.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -418,7 +418,7 @@
                         <h4>Mural 3D de Leões</h4>
                         <p>Parede imponente com leões em efeito realista, trazendo força e sofisticação ao ambiente.</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemploImagem3d.jpg', 'Mural 3D de Leões', 'Parede imponente com leões em efeito realista, trazendo força e sofisticação ao ambiente.')">
+                            onclick="openModal('./img/exemploImagem3d.jpg', 'Mural 3D de Leões', 'Mural impressionante com leões em efeito 3D ultra-realista que domina a parede com imponência e majestade. A arte detalhada captura a força e a nobreza dos animais selvagens, criando um ponto focal dramático e sofisticado. O acabamento em alta definição proporciona profundidade e realismo, transformando qualquer ambiente em um espaço grandioso e impactante, perfeito para quem busca uma decoração ousada e memorável.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -436,7 +436,7 @@
                         <h4>Decoração Motivacional</h4>
                         <p>Parede estilizada com frases inspiradoras em hand lettering e iluminação aconchegante.</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/ExemploFrases02.jpg', 'Decoração Motivacional', 'Parede estilizada com frases inspiradoras em hand lettering e iluminação aconchegante.')">
+                            onclick="openModal('./img/ExemploFrases02.jpg', 'Decoração Motivacional com Frases', 'Parede transformada com decoração motivacional personalizada, combinando frases inspiradoras em hand lettering artístico com iluminação estratégica e aconchegante. O design tipográfico único cria um ambiente inspirador que eleva o astral e transmite mensagens positivas. A iluminação sutil complementa a atmosfera, tornando o espaço ideal para áreas de convivência, escritórios ou quartos que buscam um ambiente encorajador e acolhedor.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -454,7 +454,7 @@
                         <h4>Entrada</h4>
                         <p>Decoração com tema de frases motivacionais </p>
                         <button class="view-btn"
-                            onclick="openModal('./img/ExemplosSalas07Antes.jpg', 'Decoração Motivacional', 'Parede estilizada com frases inspiradoras em hand lettering e iluminação aconchegante.')">
+                            onclick="openModal('./img/ExemplosSalas07Antes.jpg', 'Entrada com Frases Motivacionais', 'Área de entrada decorada com parede de frases motivacionais em hand lettering elegante e sofisticado. O design tipográfico personalizado cria uma primeira impressão impactante e inspiradora, transformando o hall em um espaço acolhedor que transmite mensagens positivas desde o primeiro momento. A combinação de texto artístico com iluminação decorativa cria uma atmosfera única e memorável.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -473,7 +473,7 @@
                         <p>Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das
                             crianças.</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/ExemploInfantil.jpg', 'Painel Infantil Super-Heróis', 'Parede divertida com heróis em estilo infantil, perfeita para estimular a imaginação das crianças.')">
+                            onclick="openModal('./img/ExemploInfantil.jpg', 'Painel Infantil Super-Heróis', 'Quarto infantil épico decorado com painel completo de super-heróis em estilo vibrante e colorido. Os personagens icônicos são apresentados em ação, criando um ambiente cheio de energia e aventura que estimula a imaginação e o sonho das crianças. O design dinâmico e colorido transforma o quarto em um verdadeiro santuário de heróis, perfeito para pequenos aventureiros que adoram histórias e fantasia.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -492,7 +492,7 @@
                         <p>Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a
                             natureza.</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/ExemplosFlorais.jpg', 'Painel Floral', 'Parede estilizada com efeito de pedras e folhagens, trazendo frescor e contato com a natureza.')">
+                            onclick="openModal('./img/ExemplosFlorais.jpg', 'Painel Floral Natural', 'Parede transformada em um jardim vertical com painel floral que combina efeito de pedras naturais e folhagens tropicais em tons verdes vibrantes. O design orgânico traz o frescor da natureza para dentro de casa, criando uma atmosfera zen e relaxante. As texturas realistas das pedras e plantas criam profundidade visual, perfeito para quem busca conectar o espaço interno com a beleza natural exterior.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -510,7 +510,7 @@
                         <p>Ambiente elegante com parede ripada em madeira e um Revestimento Melhorando Visual da Sala.
                         </p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemploSala04depois.jpg', 'Painel Ripado, com Revistimento', 'Ambiente elegante com parede ripada em madeira e um Revestimento Melhorando Visual da Sala.')">
+                            onclick="openModal('./img/exemploSala04depois.jpg', 'Sala com Painel Ripado e Revestimento', 'Sala de estar sofisticada com combinação harmoniosa de painel ripado em madeira e revestimento decorativo contemporâneo. A textura do painel ripado adiciona profundidade e calor ao ambiente, enquanto o revestimento complementar moderniza o espaço. A fusão de materiais naturais com acabamentos refinados cria um ambiente elegante e acolhedor, perfeito para receber e relaxar.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -527,7 +527,7 @@
                         <h4>Revestimento Cozinha</h4>
                         <p>Parede estilizada com efeito de Revistimento Melhorando o visual da Cozinha.</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosCozinha05.jpg', 'Revestimento Cozinha', 'Parede estilizada com efeito de Revistimento Melhorando o visual da Cozinha.')">
+                            onclick="openModal('./img/exemplosCozinha05.jpg', 'Cozinha com Revestimento Moderno', 'Cozinha totalmente renovada com revestimento decorativo contemporâneo que transforma o visual do ambiente. O acabamento elegante e funcional combina beleza estética com praticidade, criando um espaço moderno e acolhedor para preparar refeições e receber. O design clean eleva a cozinha a um novo patamar de sofisticação, tornando-a o coração da casa ainda mais especial.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -544,7 +544,7 @@
                         <h4>Cozinha</h4>
                         <p>Parede estilizada com efeito de Revistimento Melhorando o visual da Cozinha.</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplosCozinha01.jpg', 'Revestimento Cozinha', 'Parede estilizada com efeito de Revistimento Melhorando o visual da Cozinha.')">
+                            onclick="openModal('./img/exemplosCozinha01.jpg', 'Cozinha Renovada com Revestimento', 'Cozinha completamente transformada com revestimento decorativo que moderniza todo o espaço. O novo acabamento traz sofisticação e estilo contemporâneo, criando um ambiente funcional e belo para o dia a dia. A combinação perfeita de design e praticidade faz desta cozinha um espaço inspirador para cozinhar, reunir família e criar memórias especiais.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -561,7 +561,7 @@
                         <h4>Cozinha</h4>
                         <p>Parede estilizada com efeito de Revistimento Melhorando o visual da Cozinha.</p>
                         <button class="view-btn"
-                            onclick="openModal('./img/exemplocozinha02.jpg', 'Revestimento Cozinha', 'Parede estilizada com efeito de Revistimento Melhorando o visual da Cozinha.')">
+                            onclick="openModal('./img/exemplocozinha02.jpg', 'Cozinha Estilizada com Revestimento', 'Cozinha renovada com revestimento decorativo estilizado que eleva o design do ambiente. O acabamento sofisticado combina elegância com funcionalidade, criando um espaço moderno onde o estilo encontra a praticidade. A transformação visual torna a cozinha um ambiente acolhedor e inspirador, perfeito para momentos especiais em família.')">
                             <i class="fas fa-eye"></i> Ver Detalhes
                         </button>
                     </div>
@@ -576,7 +576,7 @@
             <div class="modal-info">
                 <h3 id="modalTitle"></h3>
                 <p id="modalDescription"></p>
-                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+                <a href="#" id="modalWhatsAppBtn" class="btn btn-primary" target="_blank">Solicitar Orçamento</a>
             </div>
         </div>
     </div>
@@ -775,8 +775,8 @@
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/5521982296120?text=Olá! Gostaria de solicitar um orçamento para adesivos decorativos."
-        class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+        class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp para solicitar orçamento">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
     <script src="script.js"></script>
