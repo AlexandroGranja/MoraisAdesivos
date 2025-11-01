@@ -175,17 +175,17 @@ document.querySelectorAll('.service-card, .gallery-item, .contact-item, .feature
 });
 
 // Counter animation for stats
-function animateCounter(element, target, duration = 2000) {
+function animateCounter(element, target, duration = 2000, suffix = '') {
     let start = 0;
     const increment = target / (duration / 16);
     
     const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
-            element.textContent = target + '+';
+            element.textContent = target + suffix;
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(start) + '+';
+            element.textContent = Math.floor(start) + suffix;
         }
     }, 16);
 }
@@ -195,8 +195,24 @@ const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const statNumber = entry.target.querySelector('h3');
-            const targetValue = parseInt(statNumber.textContent);
-            animateCounter(statNumber, targetValue);
+            const textContent = statNumber.textContent.trim();
+            
+            // Trata valores como "3+", "500+", "100%"
+            let targetValue;
+            if (textContent.includes('%')) {
+                targetValue = parseInt(textContent.replace('%', ''));
+                statNumber.textContent = '0%';
+                animateCounter(statNumber, targetValue, 2000, '%');
+            } else if (textContent.includes('+')) {
+                targetValue = parseInt(textContent.replace('+', ''));
+                statNumber.textContent = '0+';
+                animateCounter(statNumber, targetValue, 2000, '+');
+            } else {
+                targetValue = parseInt(textContent);
+                statNumber.textContent = '0';
+                animateCounter(statNumber, targetValue);
+            }
+            
             statsObserver.unobserve(entry.target);
         }
     });
@@ -268,17 +284,18 @@ window.addEventListener('load', () => {
 });
 
 // Service worker registration (for PWA capabilities)
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
-            })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-    });
-}
+// Comentado até que o arquivo sw.js seja criado
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', () => {
+//         navigator.serviceWorker.register('/sw.js')
+//             .then(registration => {
+//                 console.log('SW registered: ', registration);
+//             })
+//             .catch(registrationError => {
+//                 console.log('SW registration failed: ', registrationError);
+//             });
+//     });
+// }
 
 // Add touch support for mobile devices
 let touchStartX = 0;

@@ -19,7 +19,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <h2><i class="fas fa-palette"></i> Moraes Adesivos</h2>
+                    <h2><i class="fas fa-palette" aria-hidden="true"></i> Moraes Adesivos</h2>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Início</a></li>
@@ -28,11 +28,11 @@
                     <li><a href="#servicos" class="nav-link">Serviços</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -115,12 +115,12 @@
                 <div class="sobre-image">
                     <div class="video-card">
                         <video src="./img/videoDesmostracao.mp4" autoplay muted loop playsinline
-                            poster="./img/logo01.jpg">
+                            poster="./img/logo01.jpg" aria-label="Vídeo demonstrativo dos serviços de adesivos decorativos">
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                         <div class="video-overlay">
-                            <button class="play-pause-btn" id="playPauseBtn">
-                                <i class="fas fa-pause"></i>
+                            <button class="play-pause-btn" id="playPauseBtn" aria-label="Pausar ou reproduzir vídeo">
+                                <i class="fas fa-pause" aria-hidden="true"></i>
                             </button>
                         </div>
                     </div>
@@ -137,37 +137,37 @@
                 <p>Confira alguns dos nossos projetos realizados</p>
             </div>
 
-            <div class="gallery-filter">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th"></i>
+            <div class="gallery-filter" role="tablist" aria-label="Filtros da galeria">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="gallery-grid">
+                    <i class="fas fa-th" aria-hidden="true"></i>
                     Todos
                 </button>
-                <button class="filter-btn" data-filter="Banheiros">
-                    <i class="fas fa-bath"></i>
+                <button class="filter-btn" data-filter="Banheiros" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-bath" aria-hidden="true"></i>
                     Banheiros
                 </button>
-                <button class="filter-btn" data-filter="Salas">
-                    <i class="fas fa-couch"></i>
+                <button class="filter-btn" data-filter="Salas" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-couch" aria-hidden="true"></i>
                     Salas
                 </button>
-                <button class="filter-btn" data-filter="Cozinhas">
-                    <i class="fas fa-utensils"></i>
+                <button class="filter-btn" data-filter="Cozinhas" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
                     Cozinhas
                 </button>
-                <button class="filter-btn" data-filter="Porta/Mesa">
-                    <i class="fas fa-door-open"></i>
+                <button class="filter-btn" data-filter="Porta/Mesa" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-door-open" aria-hidden="true"></i>
                     Porta/Mesa
                 </button>
-                <button class="filter-btn" data-filter="Quartos">
-                    <i class="fas fa-bed"></i>
+                <button class="filter-btn" data-filter="Quartos" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-bed" aria-hidden="true"></i>
                     Quartos
                 </button>
-                <button class="filter-btn" data-filter="Infantil">
-                    <i class="fas fa-child"></i>
+                <button class="filter-btn" data-filter="Infantil" role="tab" aria-selected="false" aria-controls="gallery-grid">
+                    <i class="fas fa-child" aria-hidden="true"></i>
                     Infantil
                 </button>
             </div>
-            <div class="gallery-grid">
+            <div class="gallery-grid" id="gallery-grid" role="tabpanel">
 
                 <div class="gallery-item" data-category="Porta/Mesa">
                     <div class="before-after-container" data-has-comparison="true">
@@ -775,8 +775,8 @@
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/5521982296120?text=Olá! Gostaria de solicitar um orçamento para adesivos decorativos."
-        class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+        class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp para solicitar orçamento">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
     <script src="script.js"></script>
